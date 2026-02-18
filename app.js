@@ -7,14 +7,14 @@ const STORE_WHATSAPP = "212782901677";
 // Products (replace images with your 800x800)
 const products = [
   { id:"netflix", name:"NETFLIX", price:3.5, tag:"30 days Acont",
-    desc:"unavailable",
-    color:"#ff0000",    
+    desc:"Available",
+    color:"#00ff04",    
     details:"👈 في خانة ملحوظة : ضع رقم واتساب الخاص بك   ",
     img:"https://image2url.com/r2/default/images/1771378091653-ef174194-8bb2-4bb9-bf9a-2f6b9ff07011.jpg"
   },
   { id:"spotify", name:"SPOTIFY", price:4, tag:"30 days Acont",
-    desc:"unavailable",
-    color:"#ff0000",
+    desc:"Available",
+    color:"#00ff04",
     details:" 👈 في خانة ملحوظة : ضع رقم واتساب الخاص بك   ",
     img:"https://image2url.com/r2/default/images/1771378213185-4a6e25db-4f1e-4a67-87d9-98aeda0ba526.png"
   },
