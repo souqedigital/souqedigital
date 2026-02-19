@@ -118,6 +118,18 @@ const products = [
     ],
     img:"https://image2url.com/r2/default/images/1771430681556-f7d1846b-f970-4830-9464-1db51e1c8326.png"
   },
+      { id:"free fire", name:"FREE FIRE", price:1.4, tag:"game", 
+    desc:"Available",
+   category:"game",
+    color: "#4dff00",
+    details:" 👈 في خانة ملحوظة : الأيدي خاص بك الخاص بك   ",           
+     offers:[
+      { title:"100 جوهر ", sub:"Private account • Fast activation", price:1.4 },
+      { title:"210 جوهر ", sub:"Private account • Fast activation", price:2.5},
+            { title:"530 جوهر ", sub:"Private account • Fast activation", price:5.9 },
+    ],
+    img:"https://image2url.com/r2/default/images/1771527420240-c5a195c0-cbe0-46bd-b36d-702b28ba2183.jpg"
+  },
 ];
 
 // =======================
