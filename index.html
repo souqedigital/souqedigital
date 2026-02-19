@@ -11,7 +11,6 @@
     <div class="container topbar__row">
       <h1 class="brand">Souqe Digital</h1>
 
-      <!-- nav مخبي فـ CSS -->
       <nav class="nav">
         <a href="index.html" class="nav__link active">Home</a>
         <a href="#products" class="nav__link">Products</a>
@@ -19,13 +18,25 @@
     </div>
   </header>
 
-
-
-  <!-- ✅ Products -->
   <main class="container" id="products">
     <div class="section-head">
       <h2 class="title-glow">Digital Products</h2>
-      <p>Click product → fill info → send order to WhatsApp.</p>
+      <p>Click product → choose offer → fill info → send order to WhatsApp.</p>
+    </div>
+
+    <!-- ✅ Search + Categories -->
+    <div class="shop-controls">
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search product..." />
+        <span class="search-icon">🔍</span>
+      </div>
+
+      <div class="categories" id="categoryFilters">
+        <button class="cat-btn active" data-cat="all">All</button>
+        <button class="cat-btn" data-cat="Most requested">Most requested</button>
+        <button class="cat-btn" data-cat="social">Social</button>
+        <button class="cat-btn" data-cat="design">Design</button>
+      </div>
     </div>
 
     <div class="grid" id="productGrid"></div>

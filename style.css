@@ -1,3 +1,5 @@
+#offerBtn.open::after{ transform:translateY(-50%) rotate(-135deg); }
+
 :root{
   --bg:#050a18;
   --text:#eef4ff;
@@ -164,7 +166,6 @@ body{
   pointer-events:none;
 }
 .card:hover::before{opacity:1}
-
 .card:hover{transform:translateY(-7px);border-color:rgba(72,213,255,.45)}
 
 .card__img{
@@ -219,6 +220,7 @@ body{
 .product-media{overflow:hidden}
 .product-media img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block}
 .product-info{padding:16px;display:flex;flex-direction:column;gap:12px}
+
 .kv{display:flex;gap:10px;flex-wrap:wrap}
 .kv span{
   border:1px solid rgba(72,213,255,.16);
@@ -226,6 +228,7 @@ body{
   padding:6px 10px;border-radius:999px;
   color:var(--muted);font-size:12px;
 }
+
 .muted{color:var(--muted)}
 .hint{margin:0;color:var(--muted);font-size:12px}
 
@@ -291,5 +294,310 @@ body{
   text-decoration:underline;
 }
 
+/* =========================
+   ✅ Search + Categories (Index)
+========================= */
+.shop-controls{
+  margin-top:18px;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+.search-box{position:relative;max-width:420px;}
+.search-box input{
+  width:100%;
+  padding:10px 38px 10px 14px;
+  border-radius:14px;
+  border:1px solid rgba(72,213,255,.25);
+  background:rgba(255,255,255,.04);
+  color:var(--text);
+  outline:none;
+  transition:.2s;
+}
+.search-box input:focus{
+  border-color:var(--cyan);
+  box-shadow:0 0 18px rgba(72,213,255,.25);
+}
+.search-icon{
+  position:absolute; right:12px; top:50%;
+  transform:translateY(-50%);
+  opacity:.7;
+}
+.categories{display:flex;flex-wrap:wrap;gap:10px;}
+.cat-btn{
+  padding:8px 14px;
+  border-radius:999px;
+  border:1px solid rgba(72,213,255,.25);
+  background:rgba(255,255,255,.03);
+  color:var(--muted);
+  cursor:pointer;
+  transition:.25s;
+}
+.cat-btn:hover{border-color:var(--cyan);transform:translateY(-2px);}
+.cat-btn.active{
+  background:linear-gradient(90deg, rgba(47,107,255,.4), rgba(72,213,255,.3));
+  color:white;
+  border-color:var(--cyan);
+  box-shadow:0 0 18px rgba(72,213,255,.35);
+}
 
+/* =========================
+   ✅ Product info (extra nice)
+========================= */
+.product-title{
+  margin:0;
+  font-size:24px;
+  font-weight:900;
+  letter-spacing:.2px;
+}
+.product-price{
+  font-size:22px;
+  font-weight:900;
+  color:var(--cyan);
+}
+.product-meta{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:6px;
+}
+.product-meta span{
+  border:1px solid rgba(72,213,255,.16);
+  background:rgba(255,255,255,.03);
+  padding:6px 10px;
+  border-radius:999px;
+  color:var(--muted);
+  font-size:12px;
+}
 
+/* =========================
+   ✅ Offer Picker (ONE button + animation)
+   (العروض طوال + بلا logos)
+========================= */
+.offer-collapse{
+  max-height:0;
+  opacity:0;
+  transform:translateY(-6px);
+  overflow:hidden;
+  transition:max-height .35s ease, opacity .25s ease, transform .25s ease;
+}
+.offer-collapse.open{
+  max-height:520px;
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* long clean offers */
+.offer-row{
+  width:100%;
+  border-radius:14px;
+  padding:14px 16px;
+  margin-top:10px;
+  border:1px solid rgba(72,213,255,.25);
+  background:rgba(255,255,255,.03);
+  color:var(--text);
+  cursor:pointer;
+  transition:.22s;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+}
+.offer-row:hover{
+  transform:translateY(-2px);
+  border-color:rgba(72,213,255,.45);
+  box-shadow:0 0 18px rgba(72,213,255,.12);
+}
+.offer-row.selected{
+  background:linear-gradient(90deg, rgba(47,107,255,.55), rgba(72,213,255,.38));
+  border-color:rgba(72,213,255,.55);
+  box-shadow:0 0 20px rgba(72,213,255,.18);
+}
+
+/* left text */
+.offer-left{
+  display:flex;
+  flex-direction:column;
+  gap:2px;
+  min-width:0;
+}
+.offer-title{
+  font-weight:900;
+  font-size:14px;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+.offer-sub{
+  color:var(--muted);
+  font-size:12px;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+/* right price */
+.offer-price{
+  font-weight:900;
+  white-space:nowrap;
+}
+/* =========================
+   ✅ OFFERS DESIGN (PRO)
+   - full width
+   - clean
+   - nice animation
+   - selected badge ✓ (CSS only)
+========================= */
+
+/* زر "اختار العرض" */
+#offerBtn{
+  width:100%;
+  justify-content:space-between;
+  gap:10px;
+  position:relative;
+  padding-right:44px;
+}
+
+/* سهم صغير (CSS) فزر الاختيار */
+#offerBtn::after{
+  content:"";
+  position:absolute;
+  right:14px;
+  top:50%;
+  width:10px;height:10px;
+  border-right:2px solid rgba(238,244,255,.85);
+  border-bottom:2px solid rgba(238,244,255,.85);
+  transform:translateY(-50%) rotate(45deg);
+  opacity:.8;
+  transition:.2s;
+}
+
+/* ملي تفتح العروض: يدور السهم */
+.offer-collapse.open + .dummy,
+#offersBox.open ~ #offerBtn { /* safe fallback - may not apply */
+}
+#offersBox.open ~ #offerBtn::after{ transform:translateY(-50%) rotate(-135deg); }
+
+/* الحاوية ديال العروض: سلايد + fade */
+.offer-collapse{
+  margin-top:10px;
+  border-radius:16px;
+  border:1px solid rgba(72,213,255,.14);
+  background:rgba(255,255,255,.02);
+  max-height:0;
+  opacity:0;
+  transform:translateY(-8px);
+  overflow:hidden;
+  transition:max-height .35s ease, opacity .25s ease, transform .25s ease;
+  padding:0 10px; /* كيولي padding منين تفتح */
+}
+.offer-collapse.open{
+  max-height:560px;
+  opacity:1;
+  transform:translateY(0);
+  padding:10px;
+}
+
+/* الزر ديال كل عرض: طويل ومرتب */
+.offer-row{
+  width:100%;
+  border-radius:14px;
+  padding:14px 14px;
+  border:1px solid rgba(72,213,255,.18);
+  background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01));
+  color:var(--text);
+  cursor:pointer;
+  transition:.22s;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  position:relative;
+  overflow:hidden;
+}
+
+/* لمعة خفيفة فوق العرض */
+.offer-row::before{
+  content:"";
+  position:absolute;
+  inset:-2px;
+  background:radial-gradient(520px 120px at 25% 0%, rgba(72,213,255,.16), transparent 60%);
+  opacity:0;
+  transition:.22s;
+  pointer-events:none;
+}
+.offer-row:hover::before{opacity:1}
+
+.offer-row:hover{
+  transform:translateY(-2px);
+  border-color:rgba(72,213,255,.40);
+  box-shadow:0 0 18px rgba(72,213,255,.10);
+}
+.offer-row:active{transform:translateY(0) scale(.995);}
+
+/* النص فاليسار */
+.offer-left{
+  display:flex;
+  flex-direction:column;
+  gap:3px;
+  min-width:0;
+}
+.offer-title{
+  font-weight:900;
+  font-size:14px;
+  letter-spacing:.2px;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+.offer-sub{
+  color:var(--muted);
+  font-size:12px;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+/* الثمن فاليمين */
+.offer-price{
+  font-weight:950;
+  font-size:14px;
+  white-space:nowrap;
+  padding-left:10px;
+  border-left:1px solid rgba(72,213,255,.14);
+  color:rgba(238,244,255,.95);
+}
+
+/* ملي يتختار العرض */
+.offer-row.selected{
+  border-color:rgba(72,213,255,.65);
+  background:linear-gradient(90deg, rgba(47,107,255,.45), rgba(72,213,255,.22));
+  box-shadow:0 0 24px rgba(72,213,255,.18);
+}
+
+/* ✓ badge (بدون أيقونات SVG) */
+.offer-row.selected::after{
+  content:"✓";
+  position:absolute;
+  top:10px;
+  right:10px;
+  width:22px;height:22px;
+  border-radius:999px;
+  display:grid;
+  place-items:center;
+  font-weight:950;
+  font-size:14px;
+  color:rgba(238,244,255,.95);
+  border:1px solid rgba(72,213,255,.35);
+  background:rgba(72,213,255,.18);
+  box-shadow:0 0 14px rgba(72,213,255,.18);
+}
+
+/* Animation صغيرة ملي يتحدد */
+.offer-row.selected{
+  animation:offerPick .22s ease;
+}
+@keyframes offerPick{
+  from{transform:translateY(-2px) scale(.99)}
+  to{transform:translateY(0) scale(1)}
+}
