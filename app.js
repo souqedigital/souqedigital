@@ -16,8 +16,8 @@ const products = [
     price:3.5,
     tag:"30 days Acont",
     category:"Most requested",
-    desc:"Available",
-    color:"#00ff04",
+    desc:"unavailable",
+    color:"#ff0000",
     details:"👈 في خانة ملحوظة : ضع رقم واتساب الخاص بك",
     offers:[
       { title:"NETFLIX 30 DAYS", sub:"Private account • Fast activation", price:3.5 },
@@ -25,9 +25,9 @@ const products = [
     img:"https://image2url.com/r2/default/images/1771378091653-ef174194-8bb2-4bb9-bf9a-2f6b9ff07011.jpg"
   },
   { id:"spotify", name:"SPOTIFY", price:3.5, tag:"30 days Acont",
-    desc:"Available",
+    desc:"unavailable",
     category:"Most requested",
-    color:"#00ff04",
+    color:"#ff0000",
     details:" 👈 في خانة ملحوظة : ضع رقم واتساب الخاص بك   ",
  offers:[
       { title:"SPOTIFY 30 DAYS", sub:"Private account • Fast activation", price:3.5 },
@@ -36,8 +36,8 @@ const products = [
   },
   { id:"instagram-followers", name:"FOLLOWERS-INSTAGRAM", price:1.5, tag:"1000 Followers",
     category:"Social",
-    desc:"Available",
-    color: "#00ff2f",
+    desc:"unavailable",
+    color: "#ff0000",
     details:" 👈  في خانة ملحوظة : ضع رابط الصفحة/الحساب   ",
     offers:[
       { title:"مع ضمان 30 يوم", sub:"Private account • Fast activation", price:1.5 },
@@ -46,9 +46,9 @@ const products = [
     img:"https://image2url.com/r2/default/images/1771378343460-c59582e5-0277-4852-8d6f-51a176eb6fcc.jpg"
   },
   { id:"facebook-followers", name:"FOLLOWERS-FACEBOOK", price:1.5, tag:"1000 Followers",
-    desc:"Available",
+    desc:"unavailable",
     category:"Social",
-    color: "#00ff2f",
+    color: "#ff0000",
     details:" 👈  في خانة ملحوظة : ضع رابط الصفحة/الحساب ",       offers:[
       { title:"مع ضمان 30 يوم", sub:"Private account • Fast activation", price:1.5 },
       { title:"مع ضمان 365 يوم", sub:"Private account • Fast activation", price:2 },
@@ -56,9 +56,9 @@ const products = [
     img:"https://image2url.com/r2/default/images/1771380567868-859912da-83df-445c-b141-1469193059e9.png"
   },
     { id:"chatgbt", name:"CHATGBT 5PLUS", price:3.5, tag:"30 days Acont",
-    desc:"Available",
+    desc:"unavailable",
     category:"Most requested",
-    color: "#00ff2f",
+    color: "#ff0000",
     details:" 👈 في خانة ملحوظة : ضع الايميل الخاص بك   ",
        offers:[
       { title:"CHAT GPT-5 BUSINESS", sub:"يمكن دعوة 5 أشخاص", price:7 },
@@ -67,9 +67,9 @@ const products = [
     img:"https://image2url.com/r2/default/images/1771378038777-9e78c201-5448-44f6-94df-c6b4c91c1ec2.jpg"
   },
       { id:"vip شاهد", name:"VIP شاهد", price:2, tag:"30 days Acont",
-    desc:"Available",
+    desc:"unavailable",
     category:"Most requested",
-    color: "#00ff2f",
+    color: "#ff0000",
     details:" 👈 في خانة ملحوظة : ضع رقم واتساب الخاص بك   ",
         offers:[
       { title:"مع ضمان 30 يوم", sub:"Private account • Fast activation", price:2 },
@@ -90,8 +90,8 @@ const products = [
     img:"https://image2url.com/r2/default/images/1771429130694-c30ad253-080f-4e80-9dbb-7eeaf0776f4a.jpg"
   },
      { id:"capcut pro", name:"CAPCUT PRO", price:1.5, tag:"30 days Acont",
-    desc:"Available",
-    color: "#00ff2f",
+    desc:"unavailable",
+    color: "#ff0000",
     details:" 👈 في خانة ملحوظة : رقم واتساب الخاص بك   ",
     offers:[
       { title:"CAPCUT PRO", sub:"Private account • Fast activation", price:1.5 },
@@ -111,8 +111,8 @@ const products = [
     img:"https://image2url.com/r2/default/images/1771430206714-6bd6359a-a503-4322-9098-5b4b1e1a8e50.jpg"
   },
     { id:"gemini", name:"GEMINI 3 PRO + VEO 3", price:6.5, tag:"1 ANS Acont", 
-    desc:"Available",
-    color: "#4dff00",
+    desc:"unavailable",
+    color: "#ff0000",
     details:" 👈 في خانة ملحوظة : رقم واتساب الخاص بك   ",            offers:[
       { title:"يوم 365", sub:"Private account • Fast activation", price:6 },
     ],
